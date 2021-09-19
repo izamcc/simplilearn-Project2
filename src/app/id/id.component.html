@@ -1,0 +1,16 @@
+<h4 id="msg">Please Fill Your Information</h4>
+<form #idForm="ngForm" (ngSubmit)='Submit(idForm)'>
+  <div class="form-group">
+    <label for="name"> Full Name :</label>
+    <input required type="text" name="name" class="form-control" ngModel>
+  </div>
+  <div class="form-group">
+    <label for="phone">Mobile Phone :</label>
+    <input required type="mobile" name="mobile" class="form-control" ngModel>
+  </div>
+  <div class="form-group">
+    <label for="email">Email :</label>
+    <input required type="email" name="email" class="form-control" ngModel>
+  </div>
+  <button id="sbtn" class="btn btn-primary" type="submit" [disabled]="idForm.invalid"> Start Test </button>
+</form>
